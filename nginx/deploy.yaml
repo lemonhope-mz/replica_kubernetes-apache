@@ -350,12 +350,12 @@ spec:
   ports:
   - appProtocol: http
     name: http
-    port: 808
+    port: 80
     protocol: TCP
     targetPort: http
   - appProtocol: https
     name: https
-    port: 4438
+    port: 443
     protocol: TCP
     targetPort: https
   selector:
@@ -454,10 +454,10 @@ spec:
           timeoutSeconds: 1
         name: controller
         ports:
-        - containerPort: 808
+        - containerPort: 80
           name: http
           protocol: TCP
-        - containerPort: 4438
+        - containerPort: 443
           name: https
           protocol: TCP
         - containerPort: 8443
